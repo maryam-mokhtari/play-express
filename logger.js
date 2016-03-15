@@ -4,5 +4,4 @@ function logger(req, res, next) {
   console.log("logger2!");
 }
 
-
 module.exports = logger

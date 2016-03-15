@@ -2,7 +2,6 @@ var logger = require('./logger')
 var express = require('express');
 var app = express();
 
-
 app.get('/api/users',
 logger,
 function access(req, res, next) {
@@ -13,6 +12,7 @@ function access(req, res, next) {
     next()
     console.log("main logger");
   }
+
 },
 function(req, res) {
   res.json(
@@ -22,8 +22,8 @@ function(req, res) {
     },
     {
       id: 2,
-      name: 'Gholi'
+      name: 'Goli'
     }]
   );
-} );
+});
 app.listen(3000);
